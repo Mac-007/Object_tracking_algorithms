@@ -1,7 +1,7 @@
 # 🎯 Object Tracking Algorithms
 
 A comprehensive collection of object tracking algorithms implemented in Python.  
-This repository serves as a practical guide and toolkit for understanding, experimenting with, and comparing different computer vision tracking methods — from classical techniques to modern deep learning-based approaches.
+This repository serves as a practical guide and toolkit for understanding, experimenting with, and comparing different computer vision tracking methods.
 
 ---
 
