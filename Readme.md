@@ -23,9 +23,9 @@ Here are some sample outputs from the implemented detection algorithm (YOLO):
 
 | ![Detection Sample Output 1](Results/YOLO_Detection/YOLO_Detection_1.jpg) | ![Detection Sample Output 2](Results/YOLO_Detection/YOLO_Detection_2.jpg) |
 |:---------------------------------:|:---------------------------------:|
-| Sample 1 | Sample 2 |
+| Detection Output 1 | Detection Output 2 |
 | ![Detection Sample Output 3](Results/YOLO_Detection/YOLO_Detection_3.jpg) | ![Detection Sample Output 4](Results/YOLO_Detection/YOLO_Detection_4.jpg) |
-| Sample 3 | Sample 4 |
+| Detection Output 3 | Detection Output 4 |
 
 
 
