@@ -10,16 +10,22 @@ This repository serves as a practical guide and toolkit for understanding, exper
 Object tracking is a fundamental problem in computer vision, where the goal is to locate and follow objects across frames in a video sequence.  
 
 ---
+## 🎬 Input Video
 
+You can test the algorithms using this sample video:  
 [Sample Input Video](https://youtu.be/YzcawvDGe4Y?si=Op7HwBKFlnlGQu0Q)
 
 --
 
-## Output
+## 📸 Output
+
+Here are some sample outputs from the implemented detection algorithm (YOLO):
 
 | ![Detection Sample Output 1](Results/YOLO_Detection/YOLO_Detection_1.jpg) | ![Detection Sample Output 2](Results/YOLO_Detection/YOLO_Detection_2.jpg) |
-|----------------------------|----------------------------|
+|:---------------------------------:|:---------------------------------:|
+| Sample 1 | Sample 2 |
 | ![Detection Sample Output 3](Results/YOLO_Detection/YOLO_Detection_3.jpg) | ![Detection Sample Output 4](Results/YOLO_Detection/YOLO_Detection_4.jpg) |
+| Sample 3 | Sample 4 |
 
 
 
