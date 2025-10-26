@@ -70,6 +70,13 @@ while True:
 
     # Write frame to output
     out.write(frame)
+    
+    # --- Show frame live ---
+    cv2.imshow("Person Detection", frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        print("\n⚠️ Detection stopped by user")
+        break
+
 
     # --- Show progress (same line update) ---
     progress = (frame_count / total_frames) * 100
@@ -79,5 +86,6 @@ while True:
 # --- Cleanup ---
 cap.release()
 out.release()
+cv2.destroyAllWindows()
 print("\n✅ Human detection completed successfully!")
 print(f"💾 Output video saved at: {output_path}")
