@@ -10,41 +10,35 @@
 
 ## Pipeline Architecture
 
-### 1. Video Input
+#### 1. Video Input
 A video file is read using OpenCV (`cv2.VideoCapture`).
 
----
 
-### 2. Object Detection (YOLOv8)
+
+#### 2. Object Detection (YOLOv8)
 Each frame is processed by `VideoPersonDetector` (from `Object_detection_1.py`) to detect persons.  
 The output detections are in the format:
 ```text
 [x1, y1, x2, y2, confidence]
 ```
 
----
-
-### 3. Detection Formatting
+#### 3. Detection Formatting
 Detections are converted into the DeepSORT-compatible format:
 ```python
 ((x, y, w, h), confidence_score, "person")
 ```
 
----
-
-### 4. Multi-Object Tracking (DeepSORT)
+#### 4. Multi-Object Tracking (DeepSORT)
 The DeepSORT tracker associates detections across frames based on:
 - Motion prediction via Kalman Filter  
 - Appearance matching via cosine distance in embedding space  
 
----
-
-### 5. Visualization & Output
+#### 5. Visualization & Output
 Tracked persons are visualized with bounding boxes and unique IDs.  
 The processed video is saved as an output `.mp4` file.
 
 
-
+---
 
 ## Performance Summary:
   - Original Video FPS: 29
@@ -67,20 +61,21 @@ Here are some sample outputs from the implemented detection algorithm (YOLO):
 |:---------------------------------:|:---------------------------------:|
 | DeepSORT Output 3 | DeepSORT Output 4 |
 
-
+---
+ 
 ## Usage
 
-### Navigate to the DeepSORT directory:
+#### Navigate to the DeepSORT directory:
 ```bash
 cd tracking_algorithms/Tracking-by-Detection_TbD/DeepSORT/
 ```
 
-### Run the tracker:
+#### Run the tracker:
 ```bash
 python DeepSORT.py
 ```
 
-
+--
 
 ## Parameter Tuning Guide
 
