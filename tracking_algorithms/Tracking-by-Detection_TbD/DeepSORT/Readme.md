@@ -30,12 +30,11 @@ Detections are converted into the DeepSORT-compatible format:
 
 #### 4. Multi-Object Tracking (DeepSORT)
 The DeepSORT tracker associates detections across frames based on:
-- Motion prediction via Kalman Filter  
+- Motion prediction via `Kalman Filter`  
 - Appearance matching via cosine distance in embedding space  
 
 #### 5. Visualization & Output
-Tracked persons are visualized with bounding boxes and unique IDs.  
-The processed video is saved as an output `.mp4` file.
+Tracked persons are visualized with bounding boxes and unique IDs and the processed video is saved as an output `.mp4` file.
 
 
 ---
@@ -62,7 +61,7 @@ Here are some sample outputs from the implemented detection algorithm (YOLO):
 | DeepSORT Output 3 | DeepSORT Output 4 |
 
 ---
- 
+
 ## Usage
 
 #### Navigate to the DeepSORT directory:
@@ -75,13 +74,13 @@ cd tracking_algorithms/Tracking-by-Detection_TbD/DeepSORT/
 python DeepSORT.py
 ```
 
---
+---
 
 ## Parameter Tuning Guide
 
 | Parameter             | Description                                                      | Suggested Range | Impact                              |
 | --------------------- | ---------------------------------------------------------------- | --------------- | ----------------------------------- |
-| `max_age`             | Maximum number of frames to keep a track alive without detection | 20–50           | Higher = more tolerant to occlusion |
-| `n_init`              | Frames required before a new track is confirmed                  | 2–5             | Higher = fewer false IDs            |
-| `max_cosine_distance` | Threshold for appearance similarity                              | 0.2–0.5         | Lower = stricter ID matching        |
+| `max_age`             | Maximum number of frames to keep a track alive without detection | 20–50           | Higher -> more tolerant to occlusion |
+| `n_init`              | Frames required before a new track is confirmed                  | 2–5             | Higher -> fewer false IDs            |
+| `max_cosine_distance` | Threshold for appearance similarity                              | 0.2–0.5         | Lower -> stricter ID matching        |
 | `nms_max_overlap`     | Max IoU for overlapping detections                               | 0.7–1.0         | Controls bounding box suppression   |
