@@ -1,23 +1,23 @@
-# 🎯 Object Tracking Algorithms
+# Object Tracking Algorithms
 
 A comprehensive collection of object tracking algorithms implemented in Python.  
 This repository serves as a practical guide and toolkit for understanding, experimenting with, and comparing different computer vision tracking methods.
 
 ---
 
-## 📚 Overview
+## Overview
 
 Object tracking is a fundamental problem in computer vision, where the goal is to locate and follow objects across frames in a video sequence.  
 
 ---
-## 🎬 Input Video
+## Input Video
 
 You can test the algorithms using this sample video:  
 [Sample Input Video](https://youtu.be/YzcawvDGe4Y?si=Op7HwBKFlnlGQu0Q)
 
 --
 
-## 📸 Output
+## Output
 
 Here are some sample outputs from the implemented detection algorithm (YOLO):
 
@@ -28,8 +28,7 @@ Here are some sample outputs from the implemented detection algorithm (YOLO):
 | Detection Output 3 | Detection Output 4 |
 
 
-
-## 🧰 Installation
+## Installation
 
 ### Clone the Repository
 ```bash
@@ -42,5 +41,5 @@ cd object-tracking-algorithms
 
 **Author**: `Dr. Amit Chougule, PhD` 
 
-📧 Email: [amitchougule121@gmail.com](mailto:amitchougule121@gmail.com)
+Email: [amitchougule121@gmail.com](mailto:amitchougule121@gmail.com)
 ---

@@ -84,3 +84,11 @@ python DeepSORT.py
 | `n_init`              | Frames required before a new track is confirmed                  | 2–5             | Higher -> fewer false IDs            |
 | `max_cosine_distance` | Threshold for appearance similarity                              | 0.2–0.5         | Lower -> stricter ID matching        |
 | `nms_max_overlap`     | Max IoU for overlapping detections                               | 0.7–1.0         | Controls bounding box suppression   |
+
+---
+**Author / Contact**
+
+**Author**: `Dr. Amit Chougule, PhD` 
+
+Email: [amitchougule121@gmail.com](mailto:amitchougule121@gmail.com)
+---

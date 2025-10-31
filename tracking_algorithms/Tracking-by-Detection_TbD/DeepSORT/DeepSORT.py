@@ -1,11 +1,30 @@
 # tracking_algorithms/Tracking-by-Detection_TbD/DeepSORT/DeepSORT.py
+"""
+DeepSORT.py
+-------
+Implementation of the DeepSORT algorithm
+for person tracking in videos using YOLOv8 for object detection.
+
+Author: Dr. Amit Chougule, PhD
+Date: 2025-10-29
+
+Description:
+    This script integrates YOLOv8-based person detection (from Object_detection_1.py)
+    with the DeepSORT tracking algorithm. It performs real-time multi-person tracking
+    and outputs a processed video file with bounding boxes and assigned track IDs.
+
+Dependencies:
+!pip install deepsort
+!pip install ultralytics
+"""
+
 
 import sys
 import os
 import time
 import numpy as np
 import cv2
-from deep_sort_realtime.deepsort_tracker import DeepSort
+from deep_sort_realtime.deepsort_tracker import DeepSort  # pip install deepsort
 
 # --- Add parent folder to sys.path to import Object_detection_1.py ---
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -135,6 +154,6 @@ class DeepSortPersonTracker:
 if __name__ == "__main__":
     tracker = DeepSortPersonTracker(
         input_video="Sample_Video.mp4",
-        output_video="Sample_Video_Tracked.mp4"
+        output_video="Sample_Video_Tracked_DeepSORT.mp4"
     )
     tracker.run()
