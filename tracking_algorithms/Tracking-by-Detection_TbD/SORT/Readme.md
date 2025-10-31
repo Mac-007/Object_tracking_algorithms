@@ -1,7 +1,7 @@
 ## 🧠 SORT-based Person Tracking
 File: SORT.py
 
-- This script implements multi-person tracking using the classic SORT (Simple Online and Realtime Tracking) algorithm developed by `Alex Bewley`(https://github.com/abewley/sort) [Alex_Bewley_SORT.py](tracking_algorithms/Tracking-by-Detection_TbD/SORT/Alex_Bewley_SORT.py). 
+- This script implements multi-person tracking using the classic SORT (Simple Online and Realtime Tracking) algorithm developed by `Alex Bewley`(https://github.com/abewley/sort) [Alex_Bewley_SORT.py](./Alex_Bewley_SORT.py). 
 
 - It integrates YOLOv8 (for person detection) with SORT (for motion-based tracking) to perform efficient online tracking of multiple people in video sequences.
 
