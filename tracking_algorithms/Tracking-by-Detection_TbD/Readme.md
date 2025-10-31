@@ -20,7 +20,7 @@
 - **DeepSORT** is much slower but more robust, as it includes a **deep appearance descriptor** for re-identification, making it better at maintaining consistent IDs across frames.
 - This explains the **lower number of unique IDs (388)** — fewer identity switches compared to **SORT’s 767**.
 
-### Efficiency
+#### Efficiency
 - For **real-time or near real-time** use cases → **SORT** is preferred.
 - For **offline, high-accuracy tracking** → **DeepSORT** is preferred.
 

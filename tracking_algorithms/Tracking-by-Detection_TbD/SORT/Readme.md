@@ -120,6 +120,19 @@ iou_threshold   | Minimum IoU required to associate a detection with a track    
 ---
 ## Example Output
 
+### Output
+
+Here are some sample outputs from the implemented SORT + detection algorithm (YOLO):
+
+| ![SORT Sample Output 1](../../../Results/Tracking-by-Detection_TbD/SORT/SORT_1.jpg) | ![SORT Sample Output 2](../../../Results/Tracking-by-Detection_TbD/SORT/SORT_2.jpg) |
+|:---------------------------------:|:---------------------------------:|
+| SORT Output 1 | SORT Output 2 |
+
+| ![SORT Sample Output 3](../../../Results/Tracking-by-Detection_TbD/SORT/SORT_3.jpg) | ![SORT Sample Output 4](../../../Results/Tracking-by-Detection_TbD/SORT/SORT_4.jpg) |
+|:---------------------------------:|:---------------------------------:|
+| SORT Output 3 | SORT Output 4 |
+
+
 ### **Video Information**
 | Property | Value |
 |-----------|--------|
