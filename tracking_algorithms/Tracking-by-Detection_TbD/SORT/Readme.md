@@ -36,23 +36,16 @@ Project/
 ```
 
 
-1. SORT.py
-    Main script integrating YOLOv8-based person detection with the SORT tracker.
+**1. SORT.py:-** Main script integrating YOLOv8-based person detection with the SORT tracker.
     It utilizes "Alex_Bewley_SORT.py", which contains the original SORT algorithm
     by Alex Bewley (https://github.com/abewley/sort).
 
-2. Alex_Bewley_SORT.py
-    Original implementation of SORT (Simple Online and Realtime Tracking),
-    adapted for modular use within this project.
+**2. Alex_Bewley_SORT.py:-** Original implementation of SORT (Simple Online and Realtime Tracking), adapted for modular use within this project.
 
-3. Object_detection_1.py
-    Handles YOLOv8-based person detection for each frame and provides
+**3. Object_detection_1.py:-** Handles YOLOv8-based person detection for each frame and provides
     detection outputs to the tracker.
 
-4. yolov8n.pt
-    Pre-trained YOLOv8 model used for object detection
-    (automatically downloaded by the Ultralytics library if not present).
-
+**4. yolov8n.pt:-** Pre-trained YOLOv8 model used for object detection (automatically downloaded by the Ultralytics library if not present).
 
 ---
 
@@ -65,7 +58,7 @@ Project/
 
 **2. SORT Tracking**
    - Detections are passed to the SORT tracker.
-   - SORT maintains unique track IDs using a Kalman Filter and IoU-based data association.
+   - SORT maintains unique track IDs using a `Kalman Filter` and IoU-based data association.
    - Tracks are updated frame-by-frame in real time.
 
 **3. Visualization & Output**
@@ -78,21 +71,22 @@ Project/
 
 Install the following packages before running:
 
-``pip install ultralytics``
+1. ``pip install ultralytics``
 
-``pip install opencv-python``
+2. ``pip install opencv-python``
 
-``pip install numpy``
+3. ``pip install numpy``
 
-``pip install filterpy``
+4. ``pip install filterpy``
 
-Note: Alex_Bewley_SORT.py uses filterpy for Kalman filtering.  
+> Note: Alex_Bewley_SORT.py uses filterpy for Kalman filtering.  
 Ensure the file name is exactly "Alex_Bewley_SORT.py" (no spaces).
 
 ---
 ## Usage
 
 **1. Folder Structure**
+
 Your project should look like this:
 ```
 Project/
@@ -172,16 +166,16 @@ Computational Load  | Very Fast                       | Heavier (uses CNN embedd
 Recommended Use     | Real-time tracking (stable camera) | Multi-person tracking in dynamic scenes
 
 ---
-## Author & Credits
+## Credits
 
 - Original SORT Algorithm: Alex Bewley (https://github.com/abewley/sort)  
 - Detection Backbone: Ultralytics YOLOv8 (https://github.com/ultralytics/ultralytics)
 
 ---
 
-**Author / Contact**
+## Author / Contact
 
-**Author**: `Dr. Amit Chougule, PhD` 
+- **Author**: `Dr. Amit Chougule, PhD` 
 
-### Email: [amitchougule121@gmail.com](mailto:amitchougule121@gmail.com)
+- ### Email: [amitchougule121@gmail.com](mailto:amitchougule121@gmail.com)
 ---
