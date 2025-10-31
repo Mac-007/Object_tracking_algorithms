@@ -15,15 +15,47 @@ File: SORT.py
 ---
 ## 📁 File Overview
 
-File                     | Description
---------------------------|----------------------------------------------------
-**SORT.py**                   | Main script integrating YOLOv8 detection with the SORT tracker.It utilizes Alex_Bewley_SORT.py which is Original SORT algorithm. 
+| File | Description |
+|------|--------------|
+| **SORT.py** | Main script integrating YOLOv8-based person detection with the SORT tracker. It utilizes [`Alex_Bewley_SORT.py`](./Alex_Bewley_SORT.py), which contains the original SORT algorithm by [Alex Bewley](https://github.com/abewley/sort). |
+| **Alex_Bewley_SORT.py** | Original implementation of SORT (Simple Online and Realtime Tracking) adapted for modular use within this project. |
+| **Object_detection_1.py** | Handles YOLOv8-based person detection for each frame and provides detection outputs to the tracker. |
+| **yolov8n.pt** | Pre-trained YOLOv8 model used for object detection (automatically downloaded by the Ultralytics library if not present). |
 
-**Alex_Bewley_SORT.py**       | Original implementation of SORT by Alex Bewley (adapted for module import).
-**Object_detection_1.py**      | YOLOv8-based person detection for each frame.
-**yolov8n.pt**                 | Pre-trained YOLOv8 model used for object detection (Auto-Download with Ultralytics).
+
+Project/
+│
+├── Object_detection_1.py          - YOLOv8-based person detection script
+├── yolov8n.pt                     - Pre-trained YOLOv8 model weights
+│
+└── tracking_algorithms/
+    └── Tracking-by-Detection_TbD/
+        └── SORT/
+            ├── SORT.py             - Main script integrating YOLOv8 + SORT
+            └── Alex_Bewley_SORT.py - Original SORT implementation (by Alex Bewley)
+
+
+
+1. SORT.py
+    Main script integrating YOLOv8-based person detection with the SORT tracker.
+    It utilizes "Alex_Bewley_SORT.py", which contains the original SORT algorithm
+    by Alex Bewley (https://github.com/abewley/sort).
+
+2. Alex_Bewley_SORT.py
+    Original implementation of SORT (Simple Online and Realtime Tracking),
+    adapted for modular use within this project.
+
+3. Object_detection_1.py
+    Handles YOLOv8-based person detection for each frame and provides
+    detection outputs to the tracker.
+
+4. yolov8n.pt
+    Pre-trained YOLOv8 model used for object detection
+    (automatically downloaded by the Ultralytics library if not present).
+
 
 ---
+
 
 ## 🧩 Algorithm Workflow
 
@@ -65,16 +97,14 @@ Your project should look like this:
 
 Project/
 │
-├── Object_detection_1.py
-├── yolov8n.pt
+├── Object_detection_1.py          - YOLOv8-based person detection script
+├── yolov8n.pt                     - Pre-trained YOLOv8 model weights
 │
-|
-|
 └── tracking_algorithms/
     └── Tracking-by-Detection_TbD/
         └── SORT/
-            ├── SORT.py
-            └── Alex_Bewley_SORT.py
+            ├── SORT.py             - Main script integrating YOLOv8 + SORT
+            └── Alex_Bewley_SORT.py - Original SORT implementation (by Alex Bewley)
 
 **2. Running the Tracker**
 
