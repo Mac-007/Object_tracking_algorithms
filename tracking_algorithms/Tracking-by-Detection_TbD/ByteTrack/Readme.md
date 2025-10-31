@@ -1,6 +1,7 @@
 # ByteTrack Person Tracking (Supervision Integration)
 
-- This module implements **ByteTrack** for multi-person tracking in videos using **YOLOv8** for detection and the lightweight, pure-Python **Supervision** library for tracking.
+- This module implements **ByteTrack** for multi-person tracking in videos using **YOLOv8** for detection and the lightweight, pure-Python [![Supervision](https://img.shields.io/badge/Supervision-yellow)](https://supervision.roboflow.com/) library for tracking.
+
 
 - It serves as an alternative to the original [ByteTrack repository](https://github.com/FoundationVision/ByteTrack.git), which requires complex builds and dependencies (CMake, Visual Studio Build Tools).  
 
@@ -12,17 +13,10 @@
 ```
 D:.
 |   .gitignore
-|   abcd.txt
 |   LICENSE
-|   Object_detection.py
 |   Object_detection_1.py
-|   Readme.md
 |   Sample_Video.mp4
-|   Sample_Video_Detected.mp4
-|   Sample_Video_Tracked.mp4
 |   Sample_Video_Tracked_ByteSORT.mp4
-|   Sample_Video_Tracked_DeepSORT.mp4
-|   Sample_Video_Tracked_SORT.mp4
 |   yolov8n.pt
 |   
 +---.vscode
@@ -31,53 +25,28 @@ D:.
 +---Results
 |   +---Tracking-by-Detection_TbD
 |   |   +---DeepSORT
-|   |   |       DeepSORT_1.jpg
-|   |   |       DeepSORT_2.jpg
-|   |   |       DeepSORT_3.jpg
-|   |   |       DeepSORT_4.jpg
 |   |   |       
 |   |   \---SORT
-|   |           SORT_1.jpg
-|   |           SORT_2.jpg
-|   |           SORT_3.jpg
-|   |           SORT_4.jpg
-|   |           
 |   \---YOLO_Detection
-|           YOLO_Detection_1.jpg
-|           YOLO_Detection_2.jpg
-|           YOLO_Detection_3.jpg
-|           YOLO_Detection_4.jpg
-|           
+|
 +---tracking_algorithms
 |   \---Tracking-by-Detection_TbD
-|       |   Readme.md
 |       |   
 |       +---ByteTrack
 |       |       ByteSORT.py
-|       |       Readme.md
-|       |       yolov8n.pt
 |       |       
 |       +---DeepSORT
 |       |       DeepSORT.py
-|       |       Readme.md
-|       |       yolov8n.pt
 |       |       
 |       \---SORT
 |           |   Alex_Bewley_SORT.py
-|           |   Readme.md
 |           |   SORT.py
-|           |   yolov8n.pt
 |           |   
-|           \---__pycache__
-|                   Alex_Bewley_SORT.cpython-313.pyc
-|                   
-\---__pycache__
-        Object_detection_1.cpython-313.pyc
 ```
 
 ---
 
-## 🧠 Overview
+## Overview
 
 | Component | Description |
 |------------|--------------|
@@ -101,7 +70,7 @@ This will:
 
 2. Detect persons in the input video.
 
-3. Track them across frames using Supervision’s ByteTrack.
+3. Track them across frames using `Supervision’s ByteTrack`.
 
 4. Display live tracking output.
 
@@ -112,21 +81,27 @@ This will:
 ## Example Output
 
 **1. Video Information**
-  - Resolution  : 640x360
-  - FPS          : 29
-  - Total Frames : 3493
-  - Tracking     : person
+| Parameter | Value |
+|------------|--------|
+| **Resolution** | 640×360 |
+| **FPS** | 29 |
+| **Total Frames** | 3493 |
+| **Tracking** | person |
 
 **2. Frame-wise Performance (last frame)**
-Frame 3493/3493 | YOLO: 12.63 FPS | ByteTrack: 453.80 FPS | Overall: 11.07 FPS
+| Frame | YOLO FPS | ByteTrack FPS | Overall FPS |
+|--------|-----------|----------------|--------------|
+| 3493 / 3493 | 12.63 | 453.80 | 11.07 |
 
 **3. Performance Summary**
-  - Avg YOLO FPS     : 13.69
-  - Avg ByteTrack FPS: 414.26
-  - Avg Total FPS    : 11.65
-  - Total frames     : 3493
-  - Total time       : 306.21 sec
-  - Total unique persons detected: 636
+| Metric | Value |
+|---------|--------|
+| **Avg YOLO FPS** | 13.69 |
+| **Avg ByteTrack FPS** | ![414.26](https://img.shields.io/badge/-414.26-green) |
+| **Avg Total FPS** | 11.65 |
+| **Total Frames** | 3493 |
+| **Total Time** | 306.21 sec |
+| **Total Unique Persons Detected** | 636 |
 
 ---
 
@@ -164,16 +139,13 @@ Outputs
 ---
 
 ## Why Use Supervision’s ByteTrack?
-Feature	Original ByteTrack (GitHub)	Supervision ByteTrack
-Build Process	Requires CMake + Visual Studio Build Tools	Pure Python (no build needed)
-OS Compatibility	Limited (Linux-focused)	Works on Windows, macOS, Linux
-Dependencies	Heavy (YOLOX, PyTorch, ONNX)	Light (NumPy, OpenCV)
-Ease of Integration	Complex (multiple submodules)	Plug-and-play
-Recommended for	Research / large-scale setups	Quick prototyping, education, production demos
 
-The original ByteTrack repository (FoundationVision/ByteTrack
-) provides the full training and deployment pipeline but can be challenging to build on Windows.
-Using Supervision’s ByteTrack gives equivalent tracking performance for inference without compilation headaches.
+- The original ByteTrack repository (FoundationVision/ByteTrack
+) often presents challenges related to build configuration and dependency installation.
+
+- As an alternative, the `Supervision` library provides a pure-Python implementation of ByteTrack that enables seamless integration without requiring complex builds or external compilation steps.
+
+- This makes it significantly easier to use and integrate into existing YOLO-based tracking pipelines.
 
 ---
 
@@ -199,11 +171,11 @@ Total Runtime	306.21 sec
 
 ## References
 
-- Ultralytics YOLOv8 Documentation
+- [Ultralytics YOLOv8 Documentation](https://docs.ultralytics.com/)
 
-- Supervision Library (Roboflow)
+- [Supervision Library (Roboflow) - ByteTrack](https://supervision.roboflow.com/trackers/)
 
-- ByteTrack Original Repository (FoundationVision)
+- [ByteTrack Original Repository (FoundationVision)](https://github.com/FoundationVision/ByteTrack)
 
 ---
 
