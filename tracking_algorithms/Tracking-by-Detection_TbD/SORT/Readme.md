@@ -36,6 +36,7 @@ Project/
 
 
 
+
 1. SORT.py
     Main script integrating YOLOv8-based person detection with the SORT tracker.
     It utilizes "Alex_Bewley_SORT.py", which contains the original SORT algorithm
@@ -105,6 +106,7 @@ Project/
         └── SORT/
             ├── SORT.py             - Main script integrating YOLOv8 + SORT
             └── Alex_Bewley_SORT.py - Original SORT implementation (by Alex Bewley)
+
 
 **2. Running the Tracker**
 
