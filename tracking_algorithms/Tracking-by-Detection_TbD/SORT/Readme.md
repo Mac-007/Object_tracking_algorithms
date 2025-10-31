@@ -22,7 +22,7 @@ File: SORT.py
 | **Object_detection_1.py** | Handles YOLOv8-based person detection for each frame and provides detection outputs to the tracker. |
 | **yolov8n.pt** | Pre-trained YOLOv8 model used for object detection (automatically downloaded by the Ultralytics library if not present). |
 
-
+```
 Project/
 │
 ├── Object_detection_1.py          - YOLOv8-based person detection script
@@ -33,8 +33,7 @@ Project/
         └── SORT/
             ├── SORT.py             - Main script integrating YOLOv8 + SORT
             └── Alex_Bewley_SORT.py - Original SORT implementation (by Alex Bewley)
-
-
+```
 
 
 1. SORT.py
@@ -95,7 +94,7 @@ Ensure the file name is exactly "Alex_Bewley_SORT.py" (no spaces).
 
 **1. Folder Structure**
 Your project should look like this:
-
+```
 Project/
 │
 ├── Object_detection_1.py          - YOLOv8-based person detection script
@@ -106,7 +105,7 @@ Project/
         └── SORT/
             ├── SORT.py             - Main script integrating YOLOv8 + SORT
             └── Alex_Bewley_SORT.py - Original SORT implementation (by Alex Bewley)
-
+```
 
 **2. Running the Tracker**
 
