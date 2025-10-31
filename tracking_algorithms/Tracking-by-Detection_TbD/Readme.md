@@ -5,9 +5,9 @@
 | **Metric** | **Description** | **SORT** | **DeepSORT** |
 |-------------|----------------|-----------|---------------|
 | **Avg YOLO FPS** | Speed of detection (object inference rate) | 12.97 | 16.61 |
-| **Avg Tracker FPS** | Tracker update rate (data association speed) | <mark>342.34</mark> | 2.67 |
+| **Avg Tracker FPS** | Tracker update rate (data association speed) | ![342.34](https://img.shields.io/badge/-342.34-yellow) | 2.67 |
 | **Avg Total FPS** | End-to-end video processing rate | 11.06 | 2.24 |
-| **Total Frames** | Total processed frames | ![3493](https://img.shields.io/badge/-3493-yellow) | 3493 |
+| **Total Frames** | Total processed frames | 3493 | 3493 |
 | **Total Time (s)** | Overall runtime | 322.10 | 1564.60 |
 | **Unique Persons Tracked** | Distinct tracked IDs | 767 | 388 |
 
