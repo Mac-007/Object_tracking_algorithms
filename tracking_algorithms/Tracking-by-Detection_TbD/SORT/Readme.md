@@ -1,8 +1,9 @@
-🧠 SORT-based Person Tracking
+## 🧠 SORT-based Person Tracking
 File: SORT.py
 
-This script implements multi-person tracking using the classic SORT (Simple Online and Realtime Tracking) algorithm developed by Alex Bewley. 
-It integrates YOLOv8 (for person detection) with SORT (for motion-based tracking) to perform efficient online tracking of multiple people in video sequences.
+- This script implements multi-person tracking using the classic SORT (Simple Online and Realtime Tracking) algorithm developed by `Alex Bewley`(https://github.com/abewley/sort) (Alex_Bewley_SORT.py). 
+
+- It integrates YOLOv8 (for person detection) with SORT (for motion-based tracking) to perform efficient online tracking of multiple people in video sequences.
 
 SORT (Simple Online and Realtime Tracking) is extremely lightweight:
 
@@ -10,18 +11,20 @@ SORT (Simple Online and Realtime Tracking) is extremely lightweight:
 - No deep learning, no embeddings.
 - It just updates track states from detections.
 
--------------------------------------------------------------------------------
-📁 File Overview
+
+---
+## 📁 File Overview
 
 File                     | Description
 --------------------------|----------------------------------------------------
-SORT.py                   | Main script integrating YOLOv8 detection with the SORT tracker.
-Alex_Bewley_SORT.py        | Original implementation of SORT by Alex Bewley (adapted for module import).
+SORT.py                   | Main script integrating YOLOv8 detection with the SORT tracker.It utilizes Alex_Bewley_SORT.py which is Original SORT algorithm. 
+Alex_Bewley_SORT.py       | Original implementation of SORT by Alex Bewley (adapted for module import).
 Object_detection_1.py      | YOLOv8-based person detection for each frame.
 yolov8n.pt                 | Pre-trained YOLOv8 model used for object detection.
 
--------------------------------------------------------------------------------
-🧩 Algorithm Workflow
+---
+
+## 🧩 Algorithm Workflow
 
 1. YOLOv8 Detection
    - Each video frame is passed through the YOLOv8 model.
@@ -36,21 +39,22 @@ yolov8n.pt                 | Pre-trained YOLOv8 model used for object detection.
    - Each detected and tracked person is shown with a bounding box and unique ID.
    - A processed video file is saved showing tracked movements.
 
--------------------------------------------------------------------------------
-⚙️ Dependencies
+---
+
+## ⚙️ Dependencies
 
 Install the following packages before running:
 
-pip install ultralytics
-pip install opencv-python
-pip install numpy
-pip install filterpy
+``pip install ultralytics``
+``pip install opencv-python``
+``pip install numpy``
+``pip install filterpy``
 
 Note: Alex_Bewley_SORT.py uses filterpy for Kalman filtering.  
 Ensure the file name is exactly "Alex_Bewley_SORT.py" (no spaces).
 
--------------------------------------------------------------------------------
-▶️ Usage
+---
+## ▶️ Usage
 
 1. Folder Structure
 Your project should look like this:
@@ -69,13 +73,9 @@ Project/
 2. Running the Tracker
 
 To run SORT tracking on a video:
-
+```bash
 python SORT.py
-
-Or inside an IDE (like VS Code / Spyder):
-
-%runcell -i 0 D:/Codes/Object_tracking_algorithms/tracking_algorithms/Tracking-by-Detection_TbD/SORT/SORT.py
-
+```
 3. Parameters
 
 Parameter       | Description                                                    | Default
@@ -86,8 +86,8 @@ max_age         | Max frames to keep a track alive without new detections       
 min_hits        | Minimum detections before a new track is confirmed             | 2
 iou_threshold   | Minimum IoU required to associate a detection with a track     | 0.3
 
--------------------------------------------------------------------------------
-🧾 Example Output
+---
+## 🧾 Example Output
 
 Video Information:
   - Resolution  : 640x360
@@ -112,28 +112,27 @@ Performance Summary:
 - Labels showing "Person | ID:<id>"
 - Saved output file (e.g., Sample_Video_Tracked_SORT.mp4)
 
--------------------------------------------------------------------------------
-📊 Comparison with DeepSORT
+---
+## 📊 Comparison with DeepSORT
 
 Feature             | SORT                               | DeepSORT
 --------------------|------------------------------------|----------------------------------
-Tracking Basis      | Motion + IoU                      | Motion + Appearance (Re-ID)
+Tracking Basis      | Motion + IoU                       | Motion + Appearance (Re-ID)
 Re-Identification   | ❌ No                              | ✅ Yes
 Computational Load  | ⚡ Very Fast                       | 🧠 Heavier (uses CNN embeddings)
 Recommended Use     | Real-time tracking (stable camera) | Multi-person tracking in dynamic scenes
 
--------------------------------------------------------------------------------
-🧠 Author & Credits
+---
+## 🧠 Author & Credits
 
-Integration Author: Dr. Amit Chougule, PhD  
-Original SORT Algorithm: Alex Bewley (https://github.com/abewley/sort)  
-Detection Backbone: Ultralytics YOLOv8 (https://github.com/ultralytics/ultralytics)
+- Original SORT Algorithm: Alex Bewley (https://github.com/abewley/sort)  
+- Detection Backbone: Ultralytics YOLOv8 (https://github.com/ultralytics/ultralytics)
 
--------------------------------------------------------------------------------
+---
 
 **Author / Contact**
 
 **Author**: `Dr. Amit Chougule, PhD` 
 
-📧 Email: [amitchougule121@gmail.com](mailto:amitchougule121@gmail.com)
+### 📧 Email: [amitchougule121@gmail.com](mailto:amitchougule121@gmail.com)
 ---
