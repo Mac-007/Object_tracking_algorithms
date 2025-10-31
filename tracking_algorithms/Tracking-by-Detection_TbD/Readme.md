@@ -5,7 +5,7 @@
 | **Metric** | **Description** | **SORT** | **DeepSORT** |
 |-------------|----------------|-----------|---------------|
 | **Avg YOLO FPS** | Speed of detection (object inference rate) | 12.97 | 16.61 |
-| **Avg Tracker FPS** | Tracker update rate (data association speed) | 342.34 | 2.67 |
+| **Avg Tracker FPS** | Tracker update rate (data association speed) | <span style="background-color: #ffeb3b; padding: 2px 6px; border-radius: 4px;">342.34</span> | 2.67 |
 | **Avg Total FPS** | End-to-end video processing rate | 11.06 | 2.24 |
 | **Total Frames** | Total processed frames | 3493 | 3493 |
 | **Total Time (s)** | Overall runtime | 322.10 | 1564.60 |
