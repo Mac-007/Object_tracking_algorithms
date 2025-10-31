@@ -1,4 +1,4 @@
-## 🧠 SORT-based Person Tracking
+## SORT-based Person Tracking
 File: SORT.py
 
 - This script implements multi-person tracking using the classic SORT (Simple Online and Realtime Tracking) algorithm developed by `Alex Bewley`(https://github.com/abewley/sort) [Alex_Bewley_SORT.py](./Alex_Bewley_SORT.py). 
@@ -13,7 +13,7 @@ File: SORT.py
 
 
 ---
-## 📁 File Overview
+## File Overview
 
 | File | Description |
 |------|--------------|
@@ -57,7 +57,7 @@ Project/
 ---
 
 
-## 🧩 Algorithm Workflow
+## Algorithm Workflow
 
 **1. YOLOv8 Detection**
    - Each video frame is passed through the YOLOv8 model.
@@ -74,7 +74,7 @@ Project/
 
 ---
 
-## ⚙️ Dependencies
+## Dependencies
 
 Install the following packages before running:
 
@@ -90,7 +90,7 @@ Note: Alex_Bewley_SORT.py uses filterpy for Kalman filtering.
 Ensure the file name is exactly "Alex_Bewley_SORT.py" (no spaces).
 
 ---
-## ▶️ Usage
+## Usage
 
 **1. Folder Structure**
 Your project should look like this:
@@ -124,9 +124,9 @@ min_hits        | Minimum detections before a new track is confirmed            
 iou_threshold   | Minimum IoU required to associate a detection with a track     | 0.3
 
 ---
-## 🧾 Example Output
+## Example Output
 
-### 📹 **Video Information**
+### **Video Information**
 | Property | Value |
 |-----------|--------|
 | **Resolution** | 640 × 360 |
@@ -135,7 +135,7 @@ iou_threshold   | Minimum IoU required to associate a detection with a track    
 | **Tracker** | SORT ([Alex Bewley](https://github.com/abewley/sort)) |
 
 
-### ⚙️ **Performance Summary**
+### **Performance Summary**
 
 | Metric | Description | Value |
 |:--------|:-------------|:-------:|
@@ -146,33 +146,33 @@ iou_threshold   | Minimum IoU required to associate a detection with a track    
 | **Total Time** | Overall runtime | **322.10 sec** |
 | **Unique Persons Tracked** | Distinct tracked IDs | **767** |
 
-> 💡 **Note:** The high `SORT FPS` is expected — SORT performs only lightweight Kalman filtering and IOU-based matching, which is much faster than DeepSORT.
+> **Note:** The high `SORT FPS` is expected — SORT performs only lightweight Kalman filtering and IOU-based matching, which is much faster than DeepSORT.
 
 
-### ✅ **Output Details**
-- 🧍 Bounding boxes drawn around detected persons  
-- 🏷️ Labels displayed as `Person | ID:<id>`  
-- 💾 Processed video automatically saved as  
+### **Output Details**
+- Bounding boxes drawn around detected persons  
+- Labels displayed as `Person | ID:<id>`  
+- Processed video automatically saved as  
   **`Sample_Video_Tracked_SORT.mp4`**
 
-### 🧠 **Interpretation**
+### **Interpretation**
 - **Avg YOLO FPS** → Model inference speed (bottleneck for real-time tracking)  
 - **Avg SORT FPS** → Tracker’s internal speed, excluding detection  
 - **Avg Total FPS** → Combined YOLO + SORT performance (realistic frame rate)
 
 
 ---
-## 📊 Comparison with DeepSORT
+## Comparison with DeepSORT
 
 Feature             | SORT                               | DeepSORT
 --------------------|------------------------------------|----------------------------------
 Tracking Basis      | Motion + IoU                       | Motion + Appearance (Re-ID)
-Re-Identification   | ❌ No                              | ✅ Yes
-Computational Load  | ⚡ Very Fast                       | 🧠 Heavier (uses CNN embeddings)
+Re-Identification   | No                              | Yes
+Computational Load  | Very Fast                       | Heavier (uses CNN embeddings)
 Recommended Use     | Real-time tracking (stable camera) | Multi-person tracking in dynamic scenes
 
 ---
-## 🧠 Author & Credits
+## Author & Credits
 
 - Original SORT Algorithm: Alex Bewley (https://github.com/abewley/sort)  
 - Detection Backbone: Ultralytics YOLOv8 (https://github.com/ultralytics/ultralytics)
@@ -183,5 +183,5 @@ Recommended Use     | Real-time tracking (stable camera) | Multi-person tracking
 
 **Author**: `Dr. Amit Chougule, PhD` 
 
-### 📧 Email: [amitchougule121@gmail.com](mailto:amitchougule121@gmail.com)
+### Email: [amitchougule121@gmail.com](mailto:amitchougule121@gmail.com)
 ---
