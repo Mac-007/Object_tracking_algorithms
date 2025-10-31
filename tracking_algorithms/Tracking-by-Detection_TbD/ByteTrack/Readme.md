@@ -11,37 +11,35 @@
 
 ## 📂 Folder Structure
 ```
-D:.
-|   .gitignore
-|   LICENSE
-|   Object_detection_1.py
-|   Sample_Video.mp4
-|   Sample_Video_Tracked_ByteSORT.mp4
-|   yolov8n.pt
-|   
-+---.vscode
-|       settings.json
-|       
-+---Results
-|   +---Tracking-by-Detection_TbD
-|   |   +---DeepSORT
-|   |   |       
-|   |   \---SORT
-|   \---YOLO_Detection
-|
-+---tracking_algorithms
-|   \---Tracking-by-Detection_TbD
-|       |   
-|       +---ByteTrack
-|       |       ByteSORT.py
-|       |       
-|       +---DeepSORT
-|       |       DeepSORT.py
-|       |       
-|       \---SORT
-|           |   Alex_Bewley_SORT.py
-|           |   SORT.py
-|           |   
+Project/
+│
+├── .gitignore                         - Git ignore file
+├── LICENSE                            - Project license
+├── Object_detection_1.py              - YOLOv8-based person detection script
+├── Sample_Video.mp4                   - Input sample video
+├── Sample_Video_Tracked_ByteSORT.mp4  - Output video with tracking results
+├── yolov8n.pt                         - Pre-trained YOLOv8 model weights
+│
+├── .vscode/
+│   └── settings.json                  - VS Code workspace configuration
+│
+├── Results/
+│   ├── Tracking-by-Detection_TbD/
+│   │   ├── DeepSORT/                  - Results generated using DeepSORT tracker
+│   │   └── SORT/                      - Results generated using SORT tracker
+│   └── YOLO_Detection/                - YOLOv8 detection output results
+│
+└── tracking_algorithms/
+    └── Tracking-by-Detection_TbD/
+        ├── ByteTrack/
+        │   └── ByteSORT.py            - ByteTrack (Supervision-based) tracking script
+        │
+        ├── DeepSORT/
+        │   └── DeepSORT.py            - DeepSORT tracker implementation
+        │
+        └── SORT/
+            ├── SORT.py                - YOLOv8 + SORT tracking script
+            └── Alex_Bewley_SORT.py    - Original SORT implementation by Alex Bewley
 ```
 
 ---
@@ -52,7 +50,7 @@ D:.
 |------------|--------------|
 | **Object_detection_1.py** | Provides YOLOv8-based person detection. |
 | **ByteSORT.py** | Tracks detected persons using Supervision’s ByteTrack. |
-| **Supervision Library** | Supplies a simple, pure-Python `ByteTrack()` class that eliminates the need for complex C++ builds. |
+| **Supervision Library** | Supplies a simple, pure-Python `ByteTrack()` class. |
 | **Output Video** | `Sample_Video_Tracked_ByteSORT.mp4` – annotated with bounding boxes and person IDs. |
 
 ---
@@ -116,22 +114,20 @@ tracker = sv.ByteTrack()
 
 This replaces the heavier:
 
-```from yolox.tracker.byte_tracker import BYTETracker```
+```from yolox.tracker.byte_tracker import BYTETracker``` dependency used in the original ByteTrack repo.
 
-dependency used in the original ByteTrack repo.
-
-Input Format
+**Input Format**
 Each detection (from YOLO) is converted to:
 ```
-sv.Detections(xyxy=xyxy, confidence=conf, class_id=class_id)
+	sv.Detections(xyxy=xyxy, confidence=conf, class_id=class_id)
 ```
-
+	
 and passed to:
 ```
-tracker.update_with_detections(detections)
+	tracker.update_with_detections(detections)
 ```
 
-Outputs
+**Outputs**
 - Bounding boxes with ID labels
 - Real-time FPS display
 - Processed video written to disk
@@ -151,21 +147,6 @@ Outputs
 
 ## Sample Output Screenshot
 
-(Optional: include a still frame showing bounding boxes and IDs here)
-Example label overlay:
-
-Always show details
-Person | ID:42
-
-Summary
-Metric	Value
-Detector	YOLOv8n (Ultralytics)
-Tracker	ByteTrack (Supervision)
-Input	Sample_Video.mp4
-Output	Sample_Video_Tracked_ByteSORT.mp4
-Total Persons Tracked	636
-Avg Overall FPS	11.65
-Total Runtime	306.21 sec
 
 ---
 
